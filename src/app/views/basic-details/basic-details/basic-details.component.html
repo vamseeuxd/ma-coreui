@@ -1,3 +1,41 @@
-<p>
-  basic-details works!
-</p>
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-12 mb-4">
+      <!-- Nav tabs -->
+      <tabset>
+        <tab heading="Basic Information">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-header">
+                <strong>Basic Information</strong>
+              </div>
+              <div class="card-body">
+                <div class="row">
+
+                  <div class="col-6">
+                    <ma-text-input [label]="'School Name'"
+                                   [required]="false"
+                                   [min]="5"
+                                   [max]="10"
+                                   name="schoolName"
+                                   [(ngModel)]="schoolName"></ma-text-input>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </tab>
+        <tab heading="Logo and Social">
+          <h2>Logo and Social</h2>
+        </tab>
+        <tab heading="Contact Information">
+          <h1>Contact Information</h1>
+        </tab>
+        <tab heading="Global Setting">
+          <h1>Global Setting</h1>
+        </tab>
+      </tabset>
+    </div>
+  </div><!--/.row-->
+</div>

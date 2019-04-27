@@ -1,0 +1,6 @@
+<label class="form-col-form-label" *ngIf="label">{{label}}</label>
+<input type="text" #inputController [class]="'form-control '+inputValidationClass" [(ngModel)]="value">
+<div class="invalid-feedback" *ngIf="errorType==MAX_ERROR">"{{label + '" ' + maxErrorMessage + ' "' + (max + 1) + '" characters'}}</div>
+<div class="invalid-feedback" *ngIf="errorType==MIN_ERROR">"{{label + '" ' + minErrorMessage + ' "' + (min - 1) + '" characters'}}</div>
+<div class="invalid-feedback" *ngIf="errorType==REQUIRED_ERROR">"{{label + '" ' + requiredErrorMessage}}</div>
+<div class="invalid-feedback" *ngIf="errorType==PATTERN_ERROR">"{{label + '" ' + patternErrorMessage}}</div>
