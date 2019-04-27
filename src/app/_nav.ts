@@ -48,7 +48,7 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Basic Details',
-    url: '/theme/colors',
+    url: '/basic-details',
     icon: 'icon-drop'
   },
   {

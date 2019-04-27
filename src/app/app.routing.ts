@@ -52,35 +52,39 @@ export const routes: Routes = [
     children: [
       {
         path: 'base',
-        loadChildren: './views/base/base.module#BaseModule'
+        loadChildren: './views/samples/base/base.module#BaseModule'
+      },
+      {
+        path: 'basic-details',
+        loadChildren: './views/basic-details/basic-details.module#BasicDetailsModule'
       },
       {
         path: 'buttons',
-        loadChildren: './views/buttons/buttons.module#ButtonsModule'
+        loadChildren: './views/samples/buttons/buttons.module#ButtonsModule'
       },
       {
         path: 'charts',
-        loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+        loadChildren: './views/samples/chartjs/chartjs.module#ChartJSModule'
       },
       {
         path: 'dashboard',
-        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+        loadChildren: './views/samples/dashboard/dashboard.module#DashboardModule'
       },
       {
         path: 'icons',
-        loadChildren: './views/icons/icons.module#IconsModule'
+        loadChildren: './views/samples/icons/icons.module#IconsModule'
       },
       {
         path: 'notifications',
-        loadChildren: './views/notifications/notifications.module#NotificationsModule'
+        loadChildren: './views/samples/notifications/notifications.module#NotificationsModule'
       },
       {
         path: 'theme',
-        loadChildren: './views/theme/theme.module#ThemeModule'
+        loadChildren: './views/samples/theme/theme.module#ThemeModule'
       },
       {
         path: 'widgets',
-        loadChildren: './views/widgets/widgets.module#WidgetsModule'
+        loadChildren: './views/samples/widgets/widgets.module#WidgetsModule'
       }
     ]
   },
@@ -92,3 +96,4 @@ export const routes: Routes = [
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
+/*123*/
