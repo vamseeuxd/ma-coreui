@@ -25,7 +25,7 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
   @HostBinding('class') classes = 'form-group';
   @ViewChild('inputController') inputController: ElementRef;
   @Input() label: string;
-  @Input() placeholder: string;
+  @Input() placeholder = '';
   @Input() required: boolean;
   @Input() min: number;
   @Input() max: number;
@@ -40,6 +40,7 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
   private inputController$: Observable<any>;
   private inputValidationClass: string;
   private errorType = 0;
+  private pristine: boolean;
   private readonly VALID_CLASS = 'is-valid';
   private readonly INVALID_CLASS = 'is-invalid';
   private readonly NO_ERROR = 0;
@@ -60,17 +61,13 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
   }
 
   ngOnInit(): void {
-    this.validate(null);
-    console.log(this.inputController.nativeElement);
     this.inputController$ = fromEvent(this.inputController.nativeElement, 'keyup').pipe(
       map((x: any) => x.currentTarget.value),
-      debounceTime(250)
+      debounceTime(200)
     );
     this.inputController$.subscribe(value1 => {
-      this.value = value1;
       this.onChange(value1);
       this.onTouched();
-      this.validate(null);
     });
   }
 
@@ -80,17 +77,18 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
   };
 
   validate(c: FormControl) {
+    this.pristine = c.pristine;
     /*
     * required validation
     * */
     if (this.required) {
-      if (!this.value || (this.value && this.value.trim().length === 0)) {
+      if (!c.value || (c.value && c.value.trim().length === 0)) {
         this.errorType = this.REQUIRED_ERROR;
         this.inputValidationClass = this.INVALID_CLASS;
         return {required: {valid: false}};
       }
     } else {
-      if (!this.value || (this.value && this.value.trim().length === 0)) {
+      if (!c.value || (c.value && c.value.trim().length === 0)) {
         this.errorType = this.NO_ERROR;
         this.inputValidationClass = this.VALID_CLASS;
         return null;
@@ -101,7 +99,7 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
     * min validation
     * */
     if (this.min !== null && this.min !== undefined) {
-      if (!this.value || (this.value && this.value.trim().length < this.min)) {
+      if (!c.value || (c.value && c.value.trim().length < this.min)) {
         this.errorType = this.MIN_ERROR;
         this.inputValidationClass = this.INVALID_CLASS;
         return {min: {valid: false}};
@@ -112,7 +110,7 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
     * max validation
     * */
     if (this.min !== null && this.min !== undefined) {
-      if (!this.value || (this.value && this.value.trim().length > this.max)) {
+      if (!c.value || (c.value && c.value.trim().length > this.max)) {
         this.errorType = this.MAX_ERROR;
         this.inputValidationClass = this.INVALID_CLASS;
         return {min: {valid: false}};
@@ -123,7 +121,7 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
     * pattern validation
     * */
     if (this.pattern !== null && this.pattern !== undefined) {
-      if (!this.pattern.test(this.value.trim())) {
+      if (!this.pattern.test(c.value.trim())) {
         this.errorType = this.PATTERN_ERROR;
         this.inputValidationClass = this.INVALID_CLASS;
         return {min: {valid: false}};

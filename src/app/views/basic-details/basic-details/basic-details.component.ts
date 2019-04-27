@@ -8,6 +8,13 @@ import {Component, OnInit} from '@angular/core';
 export class BasicDetailsComponent implements OnInit {
   schoolName = '';
   regexp = new RegExp(/^[a-zA-Z0-9_]+$/);
+  schoolMoto: any;
+  softwareStartingDate: any;
+  affiliatedBy: any;
+  registrationNo: any;
+  affiliationNo: any;
+  dateOfEstablishment: any;
+  board: any;
 
   constructor() {
   }
