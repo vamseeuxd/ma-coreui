@@ -1,6 +1,6 @@
-# Contributing to CoreUI Free Angular Admin Template
+# Contributing to Manage Academy Free Angular Admin Template
 
-Looking to contribute something to CoreUI Free Angular Admin Template? **Here's how you can help.**
+Looking to contribute something to Manage Academy Free Angular Admin Template? **Here's how you can help.**
 
 Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 

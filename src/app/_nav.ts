@@ -164,7 +164,7 @@ export const navItems: NavData[] = [
     icon: 'icon-star',
     children: [
       {
-        name: 'CoreUI Icons',
+        name: 'Manage Academy Icons',
         url: '/icons/coreui-icons',
         icon: 'icon-star',
         badge: {
@@ -269,7 +269,7 @@ export const navItems: NavData[] = [
     attributes: {disabled: true},
   },
   {
-    name: 'Download CoreUI',
+    name: 'Download Manage Academy',
     url: 'http://coreui.io/angular/',
     icon: 'icon-cloud-download',
     class: 'mt-auto',
@@ -277,7 +277,7 @@ export const navItems: NavData[] = [
     attributes: {target: '_blank', rel: 'noopener'}
   },
   {
-    name: 'Try CoreUI PRO',
+    name: 'Try Manage Academy PRO',
     url: 'http://coreui.io/pro/angular/',
     icon: 'icon-layers',
     variant: 'danger',

@@ -168,7 +168,7 @@
 ```
 ...
 {
-  name: 'Try CoreUI PRO',
+  name: 'Try Manage Academy PRO',
   url: 'https://coreui.io/pro/react/',
   icon: 'cui-layers icons',
   variant: 'danger',

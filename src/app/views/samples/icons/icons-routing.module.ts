@@ -21,7 +21,7 @@ const routes: Routes = [
         path: 'coreui-icons',
         component: CoreUIIconsComponent,
         data: {
-          title: 'CoreUI Icons'
+          title: 'Manage Academy Icons'
         }
       },
       {

@@ -16,5 +16,5 @@ When reporting a bug, include:
 
 When suggesting a feature, include:
 
-- As much detail as possible for what we should add and why it's important to CoreUI Admin Template
+- As much detail as possible for what we should add and why it's important to Manage Academy Admin Template
 - Relevant links to prior art, screenshots, or live demos whenever possible
