@@ -1,14 +1,17 @@
 interface NavAttributes {
   [propName: string]: any;
 }
+
 interface NavWrapper {
   attributes: NavAttributes;
   element: string;
 }
+
 interface NavBadge {
   text: string;
   variant: string;
 }
+
 interface NavLabel {
   class?: string;
   variant: string;
@@ -38,6 +41,15 @@ export const navItems: NavData[] = [
       variant: 'info',
       text: 'NEW'
     }
+  },
+  {
+    title: true,
+    name: 'MA-APP Initial Setup'
+  },
+  {
+    name: 'Basic Details',
+    url: '/theme/colors',
+    icon: 'icon-drop'
   },
   {
     title: true,
@@ -254,7 +266,7 @@ export const navItems: NavData[] = [
       variant: 'secondary',
       text: 'NEW'
     },
-    attributes: { disabled: true },
+    attributes: {disabled: true},
   },
   {
     name: 'Download CoreUI',
@@ -262,13 +274,13 @@ export const navItems: NavData[] = [
     icon: 'icon-cloud-download',
     class: 'mt-auto',
     variant: 'success',
-    attributes: { target: '_blank', rel: 'noopener' }
+    attributes: {target: '_blank', rel: 'noopener'}
   },
   {
     name: 'Try CoreUI PRO',
     url: 'http://coreui.io/pro/angular/',
     icon: 'icon-layers',
     variant: 'danger',
-    attributes: { target: '_blank', rel: 'noopener' }
+    attributes: {target: '_blank', rel: 'noopener'}
   }
 ];
