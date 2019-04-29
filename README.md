@@ -170,7 +170,7 @@ Some of projects created by community but not maintained by Manage Academy team.
 
 ## Copyright and license
 
-copyright 2018 creativeLabs Łukasz Holeczek. Code released under [the MIT license](https://github.com/coreui/coreui-free-angular-admin-template/blob/master/LICENSE).
+copyright 2018 Manage Academy Łukasz Holeczek. Code released under [the MIT license](https://github.com/coreui/coreui-free-angular-admin-template/blob/master/LICENSE).
 There is only one limitation you can't re-distribute the Manage Academy as stock. You can’t do this if you modify the Manage Academy. In past we faced some problems with persons who tried to sell Manage Academy based templates.
 
 ## Support Manage Academy Development

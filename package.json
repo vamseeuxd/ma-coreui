@@ -15,7 +15,7 @@
     }
   ],
   "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2018 creativeLabs Łukasz Holeczek",
+  "copyright": "Copyright 2018 Manage Academy Łukasz Holeczek",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
