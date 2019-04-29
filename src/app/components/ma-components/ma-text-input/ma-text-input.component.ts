@@ -21,14 +21,17 @@ import {debounce, debounceTime, map} from 'rxjs/operators';
   ]
 })
 export class MaTextInputComponent implements ControlValueAccessor, Validator, OnInit {
-  @HostBinding('class') _classes = 'col-6';
-  get classes(): string {
-    return this._classes;
+  @HostBinding('class') _class = 'col-6';
+
+  get class(): string {
+    return this._class;
   }
+
   @Input()
-  set classes(value: string) {
-    this._classes = value;
+  set class(value: string) {
+    this._class = value;
   }
+
   @ViewChild('inputController') inputController: ElementRef;
   @Input() label: string;
   @Input() placeholder = '';
@@ -65,7 +68,6 @@ export class MaTextInputComponent implements ControlValueAccessor, Validator, On
   }
 
   constructor() {
-    console.log(this.classes);
   }
 
   ngOnInit(): void {
