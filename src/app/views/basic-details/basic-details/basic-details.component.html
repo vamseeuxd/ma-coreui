@@ -3,6 +3,10 @@
     <div class="col-md-12 mb-4">
       <!-- Nav tabs -->
       <tabset>
+
+        <!--
+          Basic Information
+        -->
         <tab heading="Basic Information">
           <div class="col-sm-12">
             <div class="card">
@@ -12,71 +16,89 @@
               <div class="card-body">
                 <div class="row">
 
-                    <ma-text-input [label]="'School Name'"
-                                   [placeholder]="'Enter School Name'"
-                                   [required]="true"
-                                   class="col-6"
-                                   [min]="5"
-                                   [max]="10"
-                                   [name]="'schoolName'"
-                                   [(ngModel)]="schoolName"></ma-text-input>
+                  <ma-text-input [label]="'School Name'"
+                                 [placeholder]="'Enter School Name'"
+                                 [required]="true"
+                                 class="col-6"
+                                 [min]="5"
+                                 [max]="10"
+                                 [name]="'schoolName'"
+                                 [(ngModel)]="basicInformation.schoolName"></ma-text-input>
 
-                    <ma-text-input [label]="'School Moto'"
-                                   [placeholder]="'Enter School Moto'"
-                                   [required]="true"
-                                   [name]="'schoolMoto'"
-                                   [(ngModel)]="schoolMoto"></ma-text-input>
+                  <ma-text-input [label]="'School Moto'"
+                                 [placeholder]="'Enter School Moto'"
+                                 [required]="true"
+                                 [name]="'schoolMoto'"
+                                 [(ngModel)]="basicInformation.schoolMoto"></ma-text-input>
 
-                    <ma-text-input [label]="'Software Starting Date'"
-                                   [placeholder]="'Enter Software Starting Date'"
-                                   [required]="true"
-                                   [name]="'softwareStartingDate'"
-                                   [(ngModel)]="softwareStartingDate"></ma-text-input>
+                  <ma-date-input [label]="'Software Starting Date'"
+                                 [placeholder]="'Enter Software Starting Date'"
+                                 [required]="true"
+                                 [name]="'softwareStartingDate'"
+                                 [(ngModel)]="basicInformation.softwareStartingDate"></ma-date-input>
 
-                    <ma-text-input [label]="'Affiliated By'"
-                                   [placeholder]="'Enter Affiliated By'"
-                                   [required]="true"
-                                   [name]="'affiliatedBy'"
-                                   [(ngModel)]="affiliatedBy"></ma-text-input>
+                  <ma-text-input [label]="'Affiliated By'"
+                                 [placeholder]="'Enter Affiliated By'"
+                                 [required]="true"
+                                 [name]="'affiliatedBy'"
+                                 [(ngModel)]="basicInformation.affiliatedBy"></ma-text-input>
 
-                    <ma-text-input [label]="'Registration No'"
-                                   [placeholder]="'Enter Registration No'"
-                                   [required]="true"
-                                   [name]="'registrationNo'"
-                                   [(ngModel)]="registrationNo"></ma-text-input>
+                  <ma-text-input [label]="'Registration No'"
+                                 [placeholder]="'Enter Registration No'"
+                                 [required]="true"
+                                 [name]="'registrationNo'"
+                                 [(ngModel)]="basicInformation.registrationNo"></ma-text-input>
 
-                    <ma-text-input [label]="'Affiliation No'"
-                                   [placeholder]="'Enter Affiliation No'"
-                                   [required]="true"
-                                   [name]="'affiliationNo'"
-                                   [(ngModel)]="affiliationNo"></ma-text-input>
+                  <ma-text-input [label]="'Affiliation No'"
+                                 [placeholder]="'Enter Affiliation No'"
+                                 [required]="true"
+                                 [name]="'affiliationNo'"
+                                 [(ngModel)]="basicInformation.affiliationNo"></ma-text-input>
 
-                    <ma-text-input [label]="'Date of Establishment'"
-                                   [placeholder]="'Enter Date of Establishment'"
-                                   [required]="true"
-                                   [name]="'dateOfEstablishment'"
-                                   [(ngModel)]="dateOfEstablishment"></ma-text-input>
+                  <ma-text-input [label]="'Date of Establishment'"
+                                 [placeholder]="'Enter Date of Establishment'"
+                                 [required]="true"
+                                 [name]="'dateOfEstablishment'"
+                                 [(ngModel)]="basicInformation.dateOfEstablishment"></ma-text-input>
 
-                    <ma-text-input [label]="'Board'"
-                                   [placeholder]="'Board'"
-                                   [required]="true"
-                                   [name]="'board'"
-                                   [(ngModel)]="board"></ma-text-input>
+                  <ma-text-input [label]="'Board'"
+                                 [placeholder]="'Board'"
+                                 [required]="true"
+                                 [name]="'board'"
+                                 [(ngModel)]="basicInformation.board"></ma-text-input>
+                  <hr>
+                  <pre>{{basicInformation|json}}</pre>
 
                 </div>
+                <hr>
               </div>
             </div>
           </div>
         </tab>
+
+        <!--
+          Logo and Social
+        -->
         <tab heading="Logo and Social">
-          <h2>Logo and Social</h2>
+          <h4>Datepicker Testing</h4>
+          <div class="row">
+          </div>
         </tab>
+
+        <!--
+          Contact Information
+        -->
         <tab heading="Contact Information">
           <h1>Contact Information</h1>
         </tab>
+
+        <!--
+          Global Setting
+        -->
         <tab heading="Global Setting">
           <h1>Global Setting</h1>
         </tab>
+
       </tabset>
     </div>
   </div><!--/.row-->

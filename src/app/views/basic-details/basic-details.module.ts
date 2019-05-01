@@ -6,6 +6,7 @@ import {BasicDetailsRoutingModule} from './basic-details-routing.module';
 import {TabsModule} from 'ngx-bootstrap/tabs';
 import {MaComponentsModule} from '../../components/ma-components/ma-components.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BsDatepickerModule} from 'ngx-bootstrap';
 
 const routes: Routes = [];
 

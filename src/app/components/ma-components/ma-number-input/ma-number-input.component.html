@@ -1,0 +1,55 @@
+<div class="form-group">
+
+  <!--
+    Label for Controller
+  -->
+  <label class="form-col-form-label"
+         *ngIf="label">
+    {{label}}
+    <span *ngIf="required"
+          class="font-weight-bold text-danger">
+      *
+    </span>
+  </label>
+
+  <!--
+    Text Input Controller
+  -->
+  <input type="number"
+         [placeholder]="placeholder"
+         #inputController
+         [class]="'form-control ' + ( pristine ? '' : inputValidationClass )"
+         [(ngModel)]="value">
+
+  <!--
+    Max Error Message
+  -->
+  <div class="invalid-feedback"
+       *ngIf="!pristine && errorType==MAX_ERROR">
+    "{{label + '" ' + maxErrorMessage + ' "' + (max + 1) + '".'}}
+  </div>
+
+  <!--
+    Min Error Message
+  -->
+  <div class="invalid-feedback"
+       *ngIf="!pristine && errorType==MIN_ERROR">
+    "{{label + '" ' + minErrorMessage + ' "' + (min - 1) + '".'}}
+  </div>
+
+  <!--
+    Required Error Message
+  -->
+  <div class="invalid-feedback"
+       *ngIf="!pristine && errorType==REQUIRED_ERROR">
+    "{{label + '" ' + requiredErrorMessage}}
+  </div>
+
+  <!--
+    Pattern Error Message
+  -->
+  <div class="invalid-feedback"
+       *ngIf="!pristine && errorType==PATTERN_ERROR">
+    "{{label + '" ' + patternErrorMessage}}
+  </div>
+</div>

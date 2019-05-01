@@ -1,24 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
-import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import {PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
+import {PERFECT_SCROLLBAR_CONFIG} from 'ngx-perfect-scrollbar';
+import {PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 
 // Import containers
-import { DefaultLayoutComponent } from './containers';
+import {DefaultLayoutComponent} from './containers';
 
-import { P404Component } from './views/samples/error/404.component';
-import { P500Component } from './views/samples/error/500.component';
-import { LoginComponent } from './views/samples/login/login.component';
-import { RegisterComponent } from './views/samples/register/register.component';
+import {P404Component} from './views/samples/error/404.component';
+import {P500Component} from './views/samples/error/500.component';
+import {LoginComponent} from './views/samples/login/login.component';
+import {RegisterComponent} from './views/samples/register/register.component';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -33,12 +33,13 @@ import {
 } from '@coreui/angular';
 
 // Import routing module
-import { AppRoutingModule } from './app.routing';
+import {AppRoutingModule} from './app.routing';
 
 // Import 3rd party components
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TabsModule } from 'ngx-bootstrap/tabs';
-import { ChartsModule } from 'ng2-charts/ng2-charts';
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
+import {TabsModule} from 'ngx-bootstrap/tabs';
+import {ChartsModule} from 'ng2-charts/ng2-charts';
+import {BsDatepickerModule} from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
@@ -52,6 +53,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     ChartsModule
   ],
   declarations: [
@@ -66,6 +68,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

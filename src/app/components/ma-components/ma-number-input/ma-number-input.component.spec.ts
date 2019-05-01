@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MaTextInputComponent } from './ma-text-input.component';
+import { MaNumberInputComponent } from './ma-number-input.component';
 
 describe('MaDateInputComponent', () => {
-  let component: MaTextInputComponent;
-  let fixture: ComponentFixture<MaTextInputComponent>;
+  let component: MaNumberInputComponent;
+  let fixture: ComponentFixture<MaNumberInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MaTextInputComponent ]
+      declarations: [ MaNumberInputComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MaTextInputComponent);
+    fixture = TestBed.createComponent(MaNumberInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
